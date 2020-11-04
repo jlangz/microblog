@@ -1,107 +1,24 @@
-2020-10-06 11:11:20,212 ERROR: Exception on /edit_profile [POST] [in c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+2020-11-03 16:52:13,187 ERROR: Exception on /reset_password_request [POST] [in c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
-    self.dialect.do_execute(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 593, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 427, in send
+    connection.send(self)
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "C:\Users\xuse\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 856, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "C:\Users\xuse\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 604, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "C:\Users\xuse\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 444, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "C:\Users\xuse\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "C:\Users\xuse\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
 
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\xuse\Desktop\microblog\app\routes.py", line 81, in edit_profile
-    db.session.commit()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 163, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1042, in commit
-    self.transaction.commit()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 504, in commit
-    self._prepare_impl()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 483, in _prepare_impl
-    self.session.flush()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2523, in flush
-    self._flush(objects)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2664, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
-    compat.raise_(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
-    raise exception
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2624, in _flush
-    flush_context.execute()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 586, in execute
-    persistence.save_obj(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 230, in save_obj
-    _emit_update_statements(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 994, in _emit_update_statements
-    c = cached_connections[connection].execute(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
-    return meth(self, multiparams, params)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
-    ret = self._execute_context(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
-    self._handle_dbapi_exception(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
-    util.raise_(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
-    raise exception
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
-    self.dialect.do_execute(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 593, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
-[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
-[parameters: ('Jakob The Wise', "I'm a marketing geniuzzz", 4)]
-(Background on this error at: http://sqlalche.me/e/13/gkpj)
-2020-10-06 13:43:25,295 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 14:00:34,393 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 14:23:52,908 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 14:26:46,229 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 14:26:57,134 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 14:59:39,827 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 15:41:06,944 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 15:41:40,058 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 16:12:22,759 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 16:12:41,265 ERROR: Exception on /explore [GET] [in c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 747, in __getattr__
-    return getattr(self.comparator, key)
-AttributeError: 'Comparator' object has no attribute 'dec'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 229, in __getattr__
-    return getattr(self.comparator, key)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 977, in __getattr__
-    return self._fallback_getattr(key)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\properties.py", line 364, in _fallback_getattr
-    return getattr(self.__clause_element__(), key)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 749, in __getattr__
-    util.raise_(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
-    raise exception
-AttributeError: Neither 'AnnotatedColumn' object nor 'Comparator' object has an attribute 'dec'
-
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
@@ -116,15 +33,67 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\xuse\Desktop\microblog\app\routes.py", line 150, in explore
-    posts=Post.query.order_by(Post.timestamp.dec()).all()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 231, in __getattr__
-    util.raise_(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
-    raise exception
-AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Post.timestamp has an attribute 'dec'
-2020-10-09 16:13:42,165 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 16:33:34,621 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-10-09 16:34:38,855 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
+  File "C:\Users\xuse\Desktop\microblog\app\routes.py", line 179, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\xuse\Desktop\microblog\app\email.py", line 15, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "C:\Users\xuse\Desktop\microblog\app\email.py", line 10, in send_email
+    mail.send(msg)
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "C:\Users\xuse\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 988, in quit
+    res = self.docmd("quit")
+  File "C:\Users\xuse\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 424, in docmd
+    self.putcmd(cmd, args)
+  File "C:\Users\xuse\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "C:\Users\xuse\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+2020-11-03 16:53:03,370 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
+2020-11-03 16:57:00,747 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
+2020-11-03 17:00:37,176 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
+2020-11-03 17:05:06,644 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
+2020-11-03 17:05:31,095 ERROR: Exception on /reset_password_request [POST] [in c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\xuse\Desktop\microblog\app\routes.py", line 179, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\xuse\Desktop\microblog\app\email.py", line 17, in send_password_reset_email
+    recipients=[user.email, ['ADMINS'][1]],
+IndexError: list index out of range
+2020-11-03 17:06:41,909 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
+2020-11-03 17:08:04,140 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6OCwiZXhwIjoxNjA0NDQ4NjQ5LjU1NzkyNDd9.zsV5U0FBRCvPvEiHooFKq6D9Pd4-0-FhKQ6Bxn9Wzl4 [GET] [in c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\xuse\Desktop\microblog\app\routes.py", line 188, in reset_password
+    if current_user.is_authenitcated:
+  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'is_authenitcated'
+2020-11-03 17:09:38,879 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
+2020-11-03 17:13:31,406 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
