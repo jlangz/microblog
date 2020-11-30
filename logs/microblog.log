@@ -99,3 +99,6 @@ AttributeError: 'AnonymousUserMixin' object has no attribute 'is_authenitcated'
 2020-11-03 17:13:31,406 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
 2020-11-03 17:15:26,079 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
 2020-11-04 16:35:29,950 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:49]
+2020-11-30 14:16:27,573 INFO: Microblog startup [in C:\Code\microblog\app\__init__.py:49]
+2020-11-30 14:16:38,993 INFO: Microblog startup [in C:\Code\microblog\app\__init__.py:49]
+2020-11-30 14:16:56,601 INFO: Microblog startup [in C:\Code\microblog\app\__init__.py:49]
