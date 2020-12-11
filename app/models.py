@@ -24,7 +24,7 @@ class User(UserMixin, db.Model):
     about_me = db.Column(db.String(140))
     last_see = db.Column(db.DateTime, default=datetime.utcnow)
 
-    #Each call here will wirst define user as the parent class in relation to the followers defined above
+    #Each call here will first define user as the parent class in relation to the followers defined above
     #Link to database diagram: https://blog.miguelgrinberg.com/static/images/mega-tutorial/ch08-followers-schema.png
     followed = db.relationship(
         'User', secondary=followers,
@@ -32,21 +32,22 @@ class User(UserMixin, db.Model):
         secondaryjoin=(followers.c.followed_id == id),
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
 
-    #set_password uses Flasks password hash
     def set_password(self, password):
+        #set_password uses Flasks password hash
         self.password_hash = generate_password_hash(password)
     
     def check_password(self, password):
+        #Verify the password, existing hashed against password input
         return check_password_hash(self.password_hash, password)
 
     def avatar(self, size):
         #Gravatar is used for randomized hexagonal profile pics
-
         #TODO: Allow for user to add their own profile pic at profile creation and in edit.
         digest = md5(self.email.lower().encode('utf-8')).hexdigest()
         return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
     
     def get_reset_password_token(self, expires_in=600):
+        #Create a JSON Webtoken for password reset, expires in 10 minutes
         return jwt.encode(
             {'reset_password': self.id, 'exp': time() + expires_in},
                 app.config['SECRET_KEY'], algorithm='HS256').decode('utf-8')
@@ -76,26 +77,26 @@ class User(UserMixin, db.Model):
             followers.c.followed_id == user.id).count() > 0
     #END
 
-    '''
-    This function will use a database query to avoid sorting posts for user with
-     a large amount of user followed.
-
-     It does so by first joining all posts found in the left side of the join,
-     and append any record from the followers, right side of the join that match
-     user.id condition. This can cause duplication.
-
-     The query made on the Post class is then filtered to only return a table with
-     posts where the follower id is equal to the id of the User in question, 
-     meaning that only posts where the author has the specific user as a follower
-     will be returned.
-
-     After that the posts are simply sorted by their timestamp in the database.
-
-     The initial query does not allow the User's own posts to be added so it a seperate
-     query adds them, and then merges them with the exisitng table, and sorts all the
-     posts again.
-     '''
     def followed_posts(self):
+        '''
+        This function will use a database query to avoid sorting posts for user with
+        a large amount of user followed.
+
+        It does so by first joining all posts found in the left side of the join,
+        and append any record from the followers, right side of the join that match
+        user.id condition. This can cause duplication.
+
+        The query made on the Post class is then filtered to only return a table with
+        posts where the follower id is equal to the id of the User in question, 
+        meaning that only posts where the author has the specific user as a follower
+        will be returned.
+
+        After that the posts are simply sorted by their timestamp in the database.
+
+        The initial query does not allow the User's own posts to be added so it a seperate
+        query adds them, and then merges them with the exisitng table, and sorts all the
+        posts again.
+        '''
         followed = Post.query.join(
             followers, (followers.c.followed_id == Post.user_id)).filter(
                 followers.c.follower_id == self.id)

@@ -16,8 +16,8 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
-bootstrap = Bootstrap(app)
 mail = Mail(app)
+bootstrap = Bootstrap(app)
 
 
 if not app.debug:

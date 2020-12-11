@@ -1,33 +1,89 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - Microblog</title>
-        {% else %}
-        <title>Welcome to Microblog!</title>
-        {% endif %}
-    </head>
-    <body>
-        <div>
-            Microblog: 
-            <a href="{{ url_for('index') }}">Home</a>
-            {% if current_user.is_anonymous %}
-            <a href="{{ url_for('login') }}">Login</a>
-            {% else %}
-            <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-            <a href="{{ url_for('logout') }}">Logout</a>
-            {% endif %}
-            <a href="{{ url_for('explore') }}">Explore</a>
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+{{ super() }}
+    <link rel="shortcut icon" href="https://img.icons8.com/dusk/64/000000/monitor.png"/>
+    <style>
+        body{
+            background-color: rgb(245, 245, 245);
+        }
+        :root {
+            --primary-color: lightblue;
+            --secondary-color: gray;
+            --primary-color-active: rgb(156, 198, 247);
+            --secondary-color-active: rgb(104, 103, 103);
+        }
+        .navbar-custom{
+            background-color: var(--primary-color);
+        }
+        ul.nav li a, ul.nav a:visited {
+            color: var(--secondary-color);
+        }
+        ul.nav li a:hover{
+            color: var(--secondary-color-active);
+            background-color: var(--primary-color-active);
+        }
+        .navbar-brand{
+            color: var(--secondary-color) !important;
+        }
+        a.navbar-brand:hover{
+            color: var(--secondary-color-active) !important;
+        }
+        .icon-bar{
+            background-color: var(--secondary-color);
+        }
+        #collapse:hover > #icon-bar{
+            background-color: var(--secondary-color-active) !important;
+        }
+
+    </style>
+{% endblock %}
+
+{% block title %}
+    {% if title %}{{ title }} - Microblog{% else %}Welcome to Microblog{% endif %}
+{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-custom">
+        <div class="container">
+            <div class="navbar-header">
+                <button id="collapse" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span id="icon-bar" class="sr-only">Toggle navigation</span>
+                    <span id="icon-bar" class="icon-bar"></span>
+                    <span id="icon-bar" class="icon-bar"></span>
+                    <span id="icon-bar" class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('explore') }}">Explore</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_anonymous %}
+                        <li><a href="{{ url_for('login') }}">Login</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('user', username=current_user.username) }}">Profile</a></li>
+                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
-        <hr>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
         {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-info" role="alert">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
         {% endwith %}
-        {% block content %}{% endblock %}
-    </body>
-</html>
+
+        {# application content needs to be provided in the app_content block #}
+        {% block app_content %}{% endblock %}
+    </div>
+{% endblock %}
