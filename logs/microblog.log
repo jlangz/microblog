@@ -1,61 +1,101 @@
-2020-12-10 15:36:48,726 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:38:49,410 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:43:48,375 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:44:24,354 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:45:25,213 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:46:55,687 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:48:18,354 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:50:46,770 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:53:25,295 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:55:35,071 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:57:26,565 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 15:59:32,449 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:02:47,557 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:04:14,268 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:05:31,299 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:05:46,485 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:06:59,343 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:08:27,803 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:09:16,181 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:14:49,705 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:16:03,128 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:17:48,321 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:19:03,187 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:19:36,138 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:20:27,374 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:20:49,797 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:22:21,682 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:24:07,005 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:27:09,123 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:27:45,637 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:36:22,725 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:37:28,688 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:37:32,637 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:38:32,221 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:40:03,659 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:41:01,351 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:41:13,024 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:42:09,367 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:43:38,167 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:44:26,343 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:45:20,780 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:45:44,602 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:48:13,786 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:49:25,723 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:49:58,091 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:58:07,097 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:59:05,598 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 16:59:22,856 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:02:47,458 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:03:38,825 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:04:43,858 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:07:24,511 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:11:23,109 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:12:48,310 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:13:12,893 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:13:40,486 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:15:18,829 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:15:41,140 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:17:21,961 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:18:43,533 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-10 17:19:34,036 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:41:07,177 ERROR: Exception on /explore [GET] [in c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Code\Personal\microblog\app\routes.py", line 165, in explore
+    return render_template("index.html", title='Explore', posts=posts.items,
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Code\Personal\microblog\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Code\Personal\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Code\Personal\microblog\app\templates\base.html", line 87, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Code\Personal\microblog\app\templates\index.html", line 11, in block "app_content"
+    {% include '_post.html' %}
+  File "C:\Code\Personal\microblog\app\templates\_post.html", line 5, in top-level template code
+    <img src="{{ post.author.avatar(70) }}" />
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
+2020-12-16 01:44:00,964 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:44:16,953 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:44:43,461 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:44:45,918 ERROR: Exception on /explore [GET] [in c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Code\Personal\microblog\app\routes.py", line 165, in explore
+    return render_template("index.html", title='Explore', posts=posts.items,
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Code\Personal\microblog\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Code\Personal\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Code\Personal\microblog\app\templates\base.html", line 87, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Code\Personal\microblog\app\templates\index.html", line 11, in block "app_content"
+    {% include '_post.html' %}
+  File "C:\Code\Personal\microblog\app\templates\_post.html", line 5, in top-level template code
+    <img src="{{ post.author.avatar(70) }}" />
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
+2020-12-16 01:46:31,709 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:47:42,577 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:48:24,516 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:48:33,731 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]

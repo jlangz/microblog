@@ -1,89 +1,98 @@
-2020-11-02 17:06:57,992 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-02 17:15:25,615 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-02 17:38:44,648 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-02 17:51:28,556 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-02 18:00:58,086 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-02 18:06:32,617 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-02 20:45:18,869 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-02 21:57:38,691 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-02 21:59:54,692 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-03 16:02:59,835 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-03 16:03:07,483 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-03 16:34:45,535 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-03 16:36:20,503 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-03 16:40:48,508 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-03 16:44:59,227 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-03 16:46:04,091 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-03 16:46:35,015 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-03 16:48:22,328 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
-2020-11-03 16:50:23,658 ERROR: Exception on /reset_password_request [GET] [in c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+2020-12-16 01:32:41,761 ERROR: Exception on /explore [GET] [in c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\xuse\Desktop\microblog\app\routes.py", line 182, in reset_password_request
-    return render_template('reset_password_request.html', title='Reset Password', form=form)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Code\Personal\microblog\app\routes.py", line 165, in explore
+    return render_template("index.html", title='Explore', posts=posts.items,
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 137, in render_template
     return _render(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 120, in _render
     rv = template.render(context)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 1090, in render
     self.environment.handle_exception()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\xuse\Desktop\microblog\app\templates\reset_password_request.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\xuse\Desktop\microblog\app\templates\base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\xuse\Desktop\microblog\app\templates\reset_password_request.html", line 6, in block "content"
-    {{ from.hidden_tag() }}
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'from' is undefined
-2020-11-03 16:51:31,721 ERROR: Exception on /reset_password_request [GET] [in c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+  File "C:\Code\Personal\microblog\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Code\Personal\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Code\Personal\microblog\app\templates\base.html", line 87, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Code\Personal\microblog\app\templates\index.html", line 11, in block "app_content"
+    {% include '_post.html' %}
+  File "C:\Code\Personal\microblog\app\templates\_post.html", line 5, in top-level template code
+    <img src="{{ post.author.avatar(70) }}" />
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
+2020-12-16 01:33:24,927 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:34:37,759 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:34:43,299 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:34:46,986 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:34:53,426 ERROR: Exception on /explore [GET] [in c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\xuse\Desktop\microblog\app\routes.py", line 182, in reset_password_request
-    return render_template('reset_password_request.html', title='Reset Password', form=form)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Code\Personal\microblog\app\routes.py", line 165, in explore
+    return render_template("index.html", title='Explore', posts=posts.items,
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 137, in render_template
     return _render(
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 120, in _render
     rv = template.render(context)
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 1090, in render
     self.environment.handle_exception()
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\xuse\Desktop\microblog\app\templates\reset_password_request.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\xuse\Desktop\microblog\app\templates\base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\xuse\Desktop\microblog\app\templates\reset_password_request.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "c:\users\xuse\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'from' is undefined
-2020-11-03 16:51:57,187 INFO: Microblog startup [in C:\Users\xuse\Desktop\microblog\app\__init__.py:45]
+  File "C:\Code\Personal\microblog\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Code\Personal\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Code\Personal\microblog\app\templates\base.html", line 87, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Code\Personal\microblog\app\templates\index.html", line 11, in block "app_content"
+    {% include '_post.html' %}
+  File "C:\Code\Personal\microblog\app\templates\_post.html", line 5, in top-level template code
+    <img src="{{ post.author.avatar(70) }}" />
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
