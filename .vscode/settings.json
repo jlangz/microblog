@@ -2,5 +2,8 @@
     "python.linting.pylintArgs": [
         "--load-plugins",
         "pylint-flask"
-    ]
+    ],
+    "python.analysis.extraPaths": ["venv", "venv\\Lib\\site-packages", "venv/lib/site-packages"],
+    "python.analysis.useImportHeuristic": true,
+
 }

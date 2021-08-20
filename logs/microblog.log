@@ -1,105 +1,87 @@
-2020-12-16 01:41:07,177 ERROR: Exception on /explore [GET] [in c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py:1891]
+2021-08-19 18:19:45,783 ERROR: Exception on /explore [GET] [in c:\code\personal\microblog\venv\lib\site-packages\flask\app.py:1454]
 Traceback (most recent call last):
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
   File "C:\Code\Personal\microblog\app\routes.py", line 165, in explore
     return render_template("index.html", title='Explore', posts=posts.items,
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 137, in render_template
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\templating.py", line 147, in render_template
     return _render(
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 120, in _render
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\templating.py", line 128, in _render
     rv = template.render(context)
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 1090, in render
+  File "c:\code\personal\microblog\venv\lib\site-packages\jinja2\environment.py", line 1304, in render
     self.environment.handle_exception()
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
+  File "c:\code\personal\microblog\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
   File "C:\Code\Personal\microblog\app\templates\index.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
   File "C:\Code\Personal\microblog\app\templates\base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
     {% block doc -%}
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
     {%- block html %}
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
     {% block body -%}
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
     {% block content -%}
-  File "C:\Code\Personal\microblog\app\templates\base.html", line 87, in block "content"
+  File "C:\Code\Personal\microblog\app\templates\base.html", line 87, in block 'content'
     {% block app_content %}{% endblock %}
-  File "C:\Code\Personal\microblog\app\templates\index.html", line 11, in block "app_content"
+  File "C:\Code\Personal\microblog\app\templates\index.html", line 11, in block 'app_content'
     {% include '_post.html' %}
-  File "C:\Code\Personal\microblog\app\templates\_post.html", line 5, in top-level template code
-    <img src="{{ post.author.avatar(70) }}" />
-jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
-2020-12-16 01:44:00,964 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-16 01:44:16,953 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-16 01:44:43,461 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-16 01:44:45,918 ERROR: Exception on /explore [GET] [in c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py:1891]
+  File "C:\Code\Personal\microblog\app\templates\_post.html", line 12, in top-level template code
+    said {{ moment(post.timestamp).fromNow() }}:
+  File "c:\code\personal\microblog\venv\lib\site-packages\jinja2\utils.py", line 84, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'momoent' is undefined
+2021-08-19 18:20:27,962 ERROR: Exception on /explore [GET] [in c:\code\personal\microblog\venv\lib\site-packages\flask\app.py:1454]
 Traceback (most recent call last):
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
   File "C:\Code\Personal\microblog\app\routes.py", line 165, in explore
     return render_template("index.html", title='Explore', posts=posts.items,
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 137, in render_template
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\templating.py", line 147, in render_template
     return _render(
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 120, in _render
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask\templating.py", line 128, in _render
     rv = template.render(context)
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 1090, in render
+  File "c:\code\personal\microblog\venv\lib\site-packages\jinja2\environment.py", line 1304, in render
     self.environment.handle_exception()
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
+  File "c:\code\personal\microblog\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
   File "C:\Code\Personal\microblog\app\templates\index.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
   File "C:\Code\Personal\microblog\app\templates\base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
     {% block doc -%}
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
     {%- block html %}
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
     {% block body -%}
-  File "c:\users\xuse\appdata\local\programs\python\python39\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+  File "c:\code\personal\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
     {% block content -%}
-  File "C:\Code\Personal\microblog\app\templates\base.html", line 87, in block "content"
+  File "C:\Code\Personal\microblog\app\templates\base.html", line 87, in block 'content'
     {% block app_content %}{% endblock %}
-  File "C:\Code\Personal\microblog\app\templates\index.html", line 11, in block "app_content"
+  File "C:\Code\Personal\microblog\app\templates\index.html", line 11, in block 'app_content'
     {% include '_post.html' %}
-  File "C:\Code\Personal\microblog\app\templates\_post.html", line 5, in top-level template code
-    <img src="{{ post.author.avatar(70) }}" />
-jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
-2020-12-16 01:46:31,709 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-16 01:47:42,577 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-16 01:48:24,516 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-16 01:48:33,731 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2020-12-16 01:49:07,402 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2021-03-24 18:21:28,125 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2021-03-24 18:28:13,360 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
-2021-08-17 18:11:49,756 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+  File "C:\Code\Personal\microblog\app\templates\_post.html", line 12, in top-level template code
+    said {{ moment(post.timestamp).fromNow() }}:
+  File "c:\code\personal\microblog\venv\lib\site-packages\jinja2\utils.py", line 84, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'momoent' is undefined
+2021-08-19 18:21:53,254 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:52]
