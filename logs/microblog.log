@@ -99,3 +99,7 @@ jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
 2020-12-16 01:47:42,577 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
 2020-12-16 01:48:24,516 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
 2020-12-16 01:48:33,731 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2020-12-16 01:49:07,402 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2021-03-24 18:21:28,125 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2021-03-24 18:28:13,360 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
+2021-08-17 18:11:49,756 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:49]
