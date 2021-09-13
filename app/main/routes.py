@@ -1,5 +1,6 @@
 from datetime import datetime
-from flask import render_template, flash, redirect, url_for, request, g, jsonify, current_app
+from flask import render_template, flash, redirect, url_for, request, g, \
+    jsonify, current_app
 from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from langdetect import detect, LangDetectException
@@ -8,6 +9,7 @@ from app.main.forms import EditProfileForm, EmptyForm, PostForm, SearchForm
 from app.models import User, Post
 from app.translate import translate
 from app.main import bp
+
 
 @bp.before_app_request
 def before_request():
@@ -140,6 +142,7 @@ def translate_text():
     return jsonify({'text': translate(request.form['text'],
                                       request.form['source_language'],
                                       request.form['dest_language'])})
+
 
 @bp.route('/search')
 @login_required
