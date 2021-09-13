@@ -1,52 +1,11 @@
 {% extends 'bootstrap/base.html' %}
 
-
-
-{% block styles %}
-{{ super() }}
-    <link rel="shortcut icon" href="https://img.icons8.com/dusk/64/000000/monitor.png"/>
-    <style>
-        body{
-            background-color: rgb(245, 245, 245);
-        }
-        :root {
-            --primary-color: lightblue;
-            --secondary-color: gray;
-            --primary-color-active: rgb(156, 198, 247);
-            --secondary-color-active: rgb(104, 103, 103);
-        }
-        .navbar-custom{
-            background-color: var(--primary-color);
-        }
-        ul.nav li a, ul.nav a:visited {
-            color: var(--secondary-color);
-        }
-        ul.nav li a:hover{
-            color: var(--secondary-color-active);
-            background-color: var(--primary-color-active);
-        }
-        .navbar-brand{
-            color: var(--secondary-color) !important;
-        }
-        a.navbar-brand:hover{
-            color: var(--secondary-color-active) !important;
-        }
-        .icon-bar{
-            background-color: var(--secondary-color);
-        }
-        #collapse:hover > #icon-bar{
-            background-color: var(--secondary-color-active) !important;
-        }
-
-    </style>
-{% endblock %}
-
 {% block title %}
     {% if title %}{{ title }} - Microblog{% else %}{{ _('Welcome to Microblog') }}{% endif %}
 {% endblock %}
 
 {% block navbar %}
-    <nav class="navbar navbar-default navbar-custom">
+    <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -55,19 +14,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
+                <a class="navbar-brand" href="{{ url_for('main.index') }}">Microblog</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
-                    <li><a href="{{ url_for('explore') }}">{{ _('Explore') }}</a></li>
+                    <li><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
+                    <li><a href="{{ url_for('main.explore') }}">{{ _('Explore') }}</a></li>
                 </ul>
+                {% if g.search_form %}
+                <form class="navbar-form navbar-left" method="get" action="{{ url_for('main.search') }}">
+                    <div class="form-group">
+                        {{ g.search_form.q(size=20, class='form-control', placeholder=g.search_form.q.label.text) }}
+                    </div>
+                </form>
+                {% endif %}
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}
-                    <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
+                    <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
                     {% else %}
-                    <li><a href="{{ url_for('user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
-                    <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
+                    <li><a href="{{ url_for('main.user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
+                    <li><a href="{{ url_for('auth.logout') }}">{{ _('Logout') }}</a></li>
                     {% endif %}
                 </ul>
             </div>

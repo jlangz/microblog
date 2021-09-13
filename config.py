@@ -15,3 +15,4 @@ class Config(object):
     POSTS_PER_PAGE=12
     LANGUAGES = ["en", "es", "nb"]
     MS_TRANSLATOR_KEY = "f0f08bb5ad8d44a8b774e085296ee02d"
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL') or 'http://localhost:9200'
