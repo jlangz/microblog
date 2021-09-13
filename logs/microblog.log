@@ -77,3 +77,4 @@ Traceback (most recent call last):
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'flask.ctx._AppCtxGlobals object' has no attribute 'search_form'
 2021-09-12 17:10:03,938 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:77]
+2021-09-12 19:50:03,955 INFO: Microblog startup [in C:\Code\Personal\microblog\app\__init__.py:82]
