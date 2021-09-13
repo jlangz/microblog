@@ -3,7 +3,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABSE_URL') or \
+    SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', '').replace(
+        'postgres://', 'postgresql://') or \
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = os.environ.get('MAIL_SERVER') or 'a2plcpnl0268.prod.iad2.secureserver.net'
@@ -16,3 +17,4 @@ class Config(object):
     LANGUAGES = ["en", "es", "nb"]
     MS_TRANSLATOR_KEY = "f0f08bb5ad8d44a8b774e085296ee02d"
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL') or 'http://localhost:9200'
+    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
