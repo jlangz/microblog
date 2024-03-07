@@ -1,2 +1,1 @@
-# microblog
-MEGA FLASK TUTORIAL REPO
+# Welcome to Microblog!
