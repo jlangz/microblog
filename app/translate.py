@@ -1,4 +1,3 @@
-import json
 import requests
 from flask import current_app
 from flask_babel import _
@@ -10,7 +9,8 @@ def translate(text, source_language, dest_language):
         return _('Error: the translation service is not configured.')
     auth = {
         'Ocp-Apim-Subscription-Key': current_app.config['MS_TRANSLATOR_KEY'],
-        'Ocp-Apim-Subscription-Region': 'westus2'}
+        'Ocp-Apim-Subscription-Region': 'westus'
+    }
     r = requests.post(
         'https://api.cognitive.microsofttranslator.com'
         '/translate?api-version=3.0&from={}&to={}'.format(
