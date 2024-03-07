@@ -9,7 +9,7 @@ charset-normalizer==3.3.2
 click==8.1.7
 dnspython==2.4.2
 elastic-transport==7.13.0
-elasticsearch==7.13.4
+elasticsearch==7.13.2
 email-validator==2.1.0.post1
 Flask==3.0.0
 flask-babel==4.0.0
